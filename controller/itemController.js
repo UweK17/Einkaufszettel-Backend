@@ -18,3 +18,12 @@ export const postOneItem = async (req, res) => {
   }
 };
 
+export const deleteOneItem = async (req, res) => {
+  try {
+    const deletedItem = await Item.deleteOne(req.body)
+    res.status(200).json(deletedItem);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
