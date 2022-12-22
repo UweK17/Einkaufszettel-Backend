@@ -7,7 +7,7 @@
   ],
   "routes": [
     {
-      "src": "/items",
+      "src": "/items(.*)",
       "dest": "app.js"
     }
   ]
