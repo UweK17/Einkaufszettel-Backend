@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-app.use('/items', router);
+app.use('/', router);
 
 app.listen(PORT, () => {
   console.log(`Server läuft auf Port: ${PORT}`);

@@ -5,7 +5,7 @@ const router = express.Router();
 import {getAllItems, postOneItem, deleteOneItem} from "../controller/itemController.js";
 
 router
-  .route('/')
+  .route('/items')
     .get(getAllItems)
     .post(postOneItem)
     .delete(deleteOneItem);
