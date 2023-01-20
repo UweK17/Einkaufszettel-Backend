@@ -7,7 +7,10 @@ import {getAllItems, postOneItem, deleteOneItem} from "../controller/itemControl
 router
   .route('/items')
     .get(getAllItems)
-    .post(postOneItem)
+    .post(postOneItem);
+
+router  
+  .route('/items/:id')
     .delete(deleteOneItem);
 
 export default router;
