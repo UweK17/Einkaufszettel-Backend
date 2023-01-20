@@ -20,7 +20,7 @@ export const postOneItem = async (req, res) => {
 
 export const deleteOneItem = async (req, res) => {
   try {
-    const deletedItem = await Item.deleteOne(req.params.id)
+    const deletedItem = await Item.findByIdAndDelete(req.params.id)
     res.status(200).json(deletedItem);
   } catch (error) {
     console.log(error);
